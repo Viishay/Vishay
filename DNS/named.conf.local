@@ -1,0 +1,22 @@
+//
+// Do any local configuration here
+//
+
+// Consider adding the 1918 zones here, if they are not used in your
+// organization
+//include "/etc/bind/zones.rfc1918";
+zone "viishay.com" {
+        type master;
+        file "/etc/bind/db.viishay.com";
+};
+//reverse zone
+zone "13.168.192.in-addr.arpa" {
+        type master;
+        file "/etc/bind/db.192";
+};
+
+//reverse zone for IPv6
+zone "b.a.1.0.8.b.d.0.1.0.0.2.ip6.arpa" {
+	type master;
+	file "/etc/bind/db.b.a.1.0.8.b.d.0.1.0.0.2.ip6.arpa";
+};
